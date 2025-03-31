@@ -6,3 +6,14 @@ export const createTextBox = (type, content, parent, classes = []) => {
     parent.appendChild(el);
     
 };
+const gallows = document.getElementById('gallows')
+console.log(gallows)
+
+
+export const updateHang = (imageNum) => {
+    let src=`./assets/img/h-${imageNum}.jpg` 
+    gallows.setAttribute("src", src)
+    //update gallows box with above src
+
+
+}

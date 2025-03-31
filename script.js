@@ -1,4 +1,5 @@
 import { createTextBox } from "./dom.js";
+import { updateHang } from "./dom.js";
 
 
 
@@ -41,17 +42,17 @@ for (let i = 0; i < obfuscate.length; i++) {
 console.log(obfuscate)
 
 //making the keycaps listen
+
 const keyCaps = document.querySelectorAll(".gameContainer__gallowsContainer_typewriter_keysRow_keyCap") 
-keyCaps.forEach(keycap => {
-  keycap.addEventListener('click', function handleClick(event) {
-    console.log('key clicked', event);
-    keycap.setAttribute('style', 'background-color: darkred;')
-  })
-})
+
 
 //getting Start button to interact
 const startButt = document.getElementById('startButt')
 const gallowsCont = document.getElementById('gallowsCont')
+const wordBox = document.getElementsByClassName("wordBox")
+let wrongGuess = 0
+
+
 
 // const startGame = () => {
 //receive the click input
@@ -62,8 +63,44 @@ const gallowsCont = document.getElementById('gallowsCont')
         console.log('clicked - launch new game');
 //create / display the wordbox with the obfuscate array
         createTextBox("div", obfuscate, gallowsCont, ["wordBox"])
+        keyCaps.forEach(keycap => {
+          keycap.addEventListener('click', function handleClick(event) {
+            console.log('key clicked', event.target.id);
+            keycap.setAttribute('style', 'background-color: darkred;')
 
-//receive click inputs from user, display on screen in "guess bin"
+//get underscores to replace with letters
+            function correctGuess() {
+            if (charArray.includes(event.target.id)) {
+              for (let i = 0; i < charArray.length; i++) {
+                 if(charArray[i] == event.target.id) {
+                  obfuscate[i] = event.target.id
+                 }   
+              }
+  // update the box 
+            while (wordBox.length > 0)wordBox[0].remove();
+            
+             createTextBox("div", obfuscate, gallowsCont, ["wordBox"])  
+      
+              console.log(event.target.id, "is in the word" );
+            }
+            else {
+              console.log(event.target.id, "is not in the word")
+              updateHang(wrongGuess+1);
+              wrongGuess++
+              if (wrongGuess === 10) {
+                //game is over
+              }
+            }  
+            }
+            correctGuess()
+           
+          })
+        })
+        
+//receive click inputs from user
+// for id=
+
+
 
 //run the input through check if its in the char array
 
