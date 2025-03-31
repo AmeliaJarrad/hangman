@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lavender;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid red;
+    width: 80%; 
+    background-color: rgb(224, 255, 242);
+    color: black;
+    &__gallowsContainer {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        border : 3px solid green;
+        width: 80%;
+        &_typewriter {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            align-items: center;
+            width:fit-content;
+            background-color: rgb(8, 43, 8);
+            border-radius: 10%;
+            padding:1%;
+            &_keysRow{
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                align-items: center;
+                width: 85%;
+                
+                &_keyCap {
+                    display: flex;
+                    height:35px;
+                    width: 35px;
+                    padding: 5%;
+                    justify-content: center;
+                    align-self: center;
+                    align-items: center;
+                    border : 3px solid silver;
+                    border-radius: 50%;
+                    color: white;
+                    background-color: black;
+                    
+
+                }  
+            }
+        }
+    }
+}
+
+.gallowsStart {
+    border: 5px ridge gold;
+    margin: 2%;
+    box-shadow: 0 1.2em 2.4em rgb(67, 67, 67)
+}
+
+.hidden {
+    display: none;
+}
+
+.winMsg {
+    color: green
+}
+
+.loseMsg {
+    color: red
+}
+
+.wordBox {
+    display: flex;
+    background-color: antiquewhite;
+    border: 5px ridge gold;
+    margin: 2%;
+    padding: 2%;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    box-shadow: 0 1.2em 2.4em rgb(67, 67, 67);
+    font-size: x-large;
+    font-weight: bold;
+    
+}
