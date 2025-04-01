@@ -97,6 +97,18 @@ body {
   font-weight: bold;
 }
 
+.winGame {
+  display: flex;
+  color: green;
+  background-color: lightgreen;
+  border: 5px solid greenyellow;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
 .playAgain {
   display: flex;
   color: green;

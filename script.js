@@ -99,11 +99,15 @@ let wrongGuess = 0
                 updateHang("ded")
                 playAgain.setAttribute('class', 'playAgain')
               }
-
             } 
             }
             correctGuess()
-           
+           if (obfuscate.includes("_") !== true) {
+            while (typeWriter.length > 0)typeWriter[0].remove();
+            createTextBox("div", "Yay! You WON!", gameContainer, ["winGame"])
+            updateHang("win")
+            playAgain.setAttribute('class', 'playAgain')
+           }
           })
         })
         
