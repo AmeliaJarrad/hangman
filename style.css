@@ -3,13 +3,47 @@
 }
 
 body {
-  background-color: lavender;
+  background-color: rgb(199, 199, 230);
+}
+
+h1 {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  color: black;
+  font-weight: 1000;
+  font-family: "Courier New", Courier, monospace;
+}
+
+button {
+  background-color: rgb(73, 211, 130);
+  border-radius: 10px;
+  font-family: fantasy;
+  font-size: large;
+  height: 3em;
+  border: 5px ridge rgb(8, 43, 8);
+  margin: 2%;
+}
+
+button:hover {
+  background-color: rgb(45, 131, 81);
+}
+
+button:active {
+  background-color: rgb(29, 87, 53);
+  box-shadow: 0 4px #666;
 }
 
 .gameContainer {
   display: flex;
   flex-direction: column;
-  border: 3px solid red;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  border: 5px ridge rgb(8, 43, 8);
   width: 80%;
   background-color: rgb(224, 255, 242);
   color: black;
@@ -19,7 +53,6 @@ body {
   flex-direction: column;
   align-self: center;
   align-items: center;
-  border: 3px solid green;
   width: 80%;
 }
 .gameContainer__gallowsContainer_typewriter {
@@ -31,6 +64,7 @@ body {
   background-color: rgb(8, 43, 8);
   border-radius: 10%;
   padding: 1%;
+  margin: 2%;
 }
 .gameContainer__gallowsContainer_typewriter_keysRow {
   display: flex;
@@ -57,18 +91,11 @@ body {
   border: 5px ridge gold;
   margin: 2%;
   box-shadow: 0 1.2em 2.4em rgb(67, 67, 67);
+  width: 50%;
 }
 
 .hidden {
   display: none;
-}
-
-.winMsg {
-  color: green;
-}
-
-.loseMsg {
-  color: red;
 }
 
 .wordBox {
@@ -87,37 +114,55 @@ body {
 
 .endGame {
   display: flex;
-  color: red;
+  color: black;
   background-color: palevioletred;
   border: 5px solid red;
+  border-radius: 10px;
   justify-content: center;
   align-self: center;
   align-items: center;
   font-size: x-large;
   font-weight: bold;
+  padding: 2%;
+  margin: 2%;
 }
 
 .winGame {
   display: flex;
-  color: green;
+  color: black;
   background-color: lightgreen;
   border: 5px solid greenyellow;
+  border-radius: 10px;
   justify-content: center;
   align-self: center;
   align-items: center;
   font-size: x-large;
   font-weight: bold;
+  padding: 2%;
+  margin: 2%;
 }
 
 .playAgain {
   display: flex;
-  color: green;
-  border: 5px solid yellowgreen;
+  color: rgb(8, 63, 26);
+  border: 5px solid rgb(118, 155, 45);
+  border-radius: 10px;
   justify-content: center;
   align-self: center;
   align-items: center;
   font-size: x-large;
+  width: 50%;
   font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.playAgain:hover {
+  background-color: rgb(45, 131, 81);
+}
+
+.playAgain:active {
+  background-color: rgb(29, 87, 53);
+  box-shadow: 0 4px #666;
 }
 
 /*# sourceMappingURL=style.css.map */
