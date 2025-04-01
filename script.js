@@ -39,6 +39,8 @@ for (let i = 0; i < obfuscate.length; i++) {
     obfuscate[i] = unscr  
 }
 
+
+
 console.log(obfuscate)
 
 //making the keycaps listen
@@ -51,6 +53,8 @@ const startButt = document.getElementById('startButt')
 const gallowsCont = document.getElementById('gallowsCont')
 const wordBox = document.getElementsByClassName("wordBox")
 const gameContainer = document.getElementById("gameContainer")
+const typeWriter = document.getElementsByClassName("gameContainer__gallowsContainer_typewriter")
+const playAgain = document.getElementById('playAgain')
 let wrongGuess = 0
 
 
@@ -89,12 +93,11 @@ let wrongGuess = 0
 
 // end game stuff              
               if (wrongGuess === 10) {
+                while (typeWriter.length > 0)typeWriter[0].remove();
+                //typeWriter.remove();
                 createTextBox("div", "Bad luck! You got hung!", gameContainer, ["endGame"])
-                
-                // location.reload();
-                
-                
-                //how do I
+                updateHang("ded")
+                playAgain.setAttribute('class', 'playAgain')
               }
 
             } 

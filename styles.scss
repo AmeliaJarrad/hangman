@@ -100,3 +100,15 @@ body {
     font-size: x-large;
     font-weight: bold;
 }
+
+.playAgain {
+    display: flex;
+    color: green;
+    border: 5px solid yellowgreen;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+  
+}
