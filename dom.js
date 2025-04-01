@@ -17,3 +17,12 @@ export const updateHang = (imageNum) => {
 
 
 }
+export const gameWin = (winner) => {
+    let winner="./assets/img/h-win.jpg"
+
+}
+
+export const gameLose = (loser) => {
+    let loser="./assets/img/h-ded.jpg"
+
+}

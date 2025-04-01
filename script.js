@@ -50,6 +50,7 @@ const keyCaps = document.querySelectorAll(".gameContainer__gallowsContainer_type
 const startButt = document.getElementById('startButt')
 const gallowsCont = document.getElementById('gallowsCont')
 const wordBox = document.getElementsByClassName("wordBox")
+const gameContainer = document.getElementById("gameContainer")
 let wrongGuess = 0
 
 
@@ -78,19 +79,25 @@ let wrongGuess = 0
               }
   // update the box 
             while (wordBox.length > 0)wordBox[0].remove();
-            
              createTextBox("div", obfuscate, gallowsCont, ["wordBox"])  
-      
               console.log(event.target.id, "is in the word" );
             }
             else {
               console.log(event.target.id, "is not in the word")
               updateHang(wrongGuess+1);
               wrongGuess++
+
+// end game stuff              
               if (wrongGuess === 10) {
-                //game is over
+                createTextBox("div", "Bad luck! You got hung!", gameContainer, ["endGame"])
+                
+                // location.reload();
+                
+                
+                //how do I
               }
-            }  
+
+            } 
             }
             correctGuess()
            

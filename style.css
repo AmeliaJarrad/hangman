@@ -85,4 +85,16 @@ body {
   font-weight: bold;
 }
 
+.endGame {
+  display: flex;
+  color: red;
+  background-color: palevioletred;
+  border: 5px solid red;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=style.css.map */
